@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <title>five task</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Dancing Script", cursive;
+    }
+
+    body {
+      background-color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #333;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h2 span {
+      display: block;
+      font-size: 32px;
+      font-weight:900;
+      color: #222;
+    }
+
+    .diamond {
+      width: 10px;
+      height: 10px;
+      background-color: #00cfcf;
+      transform: rotate(45deg);
+      margin: 10px auto 30px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
+      margin: 40px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-date {
+      color: #00cfcf;
+      font-weight: bold;
+      font-size: 14px;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 10px;
+    }
+
+    .data {
+      font-size: 14px;
+      color: #777;
+      margin-left: 5px;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 8px;
+       padding: 10px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #6e6d6d;
+      line-height: 1.6;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       padding: 10px;
+    }
+
+    .view-all {
+      margin-top: 30px;
+    }
+
+    .view-all button {
+      padding: 10px 25px;
+      background-color: #00cfcf;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .view-all button:hover {
+      background-color: #00b0b0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    Browse Our <br><span>Business Tips</span>
+  </h2>
+  <div class="diamond"></div>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="./179_1675948994.png" alt="Card 1">
+      <div class="card-content">
+        <span class="card-date">07.05.2021</span><span class="data"> by admin</span>
+        <p class="card-title">How long before the exit you must be planning it?</p>
+        <p class="card-text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae perferendis hic illum dolorum, modi impedit a possimus maxime, reprehenderit quam rem quos consectetur mollitia iusto reiciendis saepe autem quibusdam quas est iste distinctio quisquam, qui eaque cumque? Ut sed maxime vel quam atque necessitatibus, pariatur nostrum, impedit dignissimos ducimus alias.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="./upi-credit-cards-v1.png" alt="Card 2">
+      <div class="card-content">
+        <span class="card-date">07.05.2021</span><span class="data"> by admin</span>
+        <p class="card-title">Is it viable now for IT companies to file an IPO?</p>
+        <p class="card-text">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, neque mollitia alias dolores vel dolor expedita ex nostrum quae ipsum accusantium, architecto cum ipsam quod doloribus. Ullam optio amet atque dignissimos! Veritatis fuga molestias ea sapiente tempore itaque repellendus et neque, repellat numquam modi vitae porro aperiam minima quod! Quo.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./web-design-trends.jpg" alt="Card 3">
+      <div class="card-content">
+        <span class="card-date">07.05.2021</span><span class="data"> by admin</span>
+        <p class="card-title">Bringing a new CFO at the time of crisis?</p>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto error hic fugiat molestiae asperiores, reiciendis nisi obcaecati repellendus ducimus deserunt tenetur nesciunt aut animi. Vitae iure ullam adipisci mollitia quasi itaque, aperiam voluptate quod. Hic eius iste alias tenetur blanditiis quos nam animi sequi iure facilis molestiae, libero odit rerum!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-all">
+    <button>VIEW ALL</button>
+  </div>
+
+</body>
+</html>
