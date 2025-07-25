@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>fourth assignment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .progress-container {
+      width: 100%;
+      background-color: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: #af4c57;
+    }
+
+    .brand { width: 90%; }
+    .web { width: 80%; }
+    .graphic { width: 85%; }
+    .dev { width: 70%; }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .left, .right {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .range {
+      margin-bottom: 20px;
+    }
+
+    .member-team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .memeber {
+      background-color: #f7f7f7;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      width: 22%;
+    }
+
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+   
+    .image::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(175, 76, 87, 0.6);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .image:hover img {
+      transform: scale(1.1);
+    }
+
+    .image:hover::after {
+      opacity: 1;
+    }
+
+   
+
+    .contact-us {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-us button {
+      margin-top: 10px;
+      background-color: #af4c57;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-us button:hover {
+      background-color: #922c3a;
+    }
+ @media (max-width: 992px) {
+      .memeber {
+        width: 47%;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .memeber {
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="about">
+    <div class="about_info" style="text-align: center; padding: 20px;">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quas aliquid nemo neque natus vel eaque similique.<br> Adipisci magnam blanditiis atque, assumenda veritatis delectus, molestias repellat totam magni distinctio est.</p>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos totam perferendis unde maxime vel et eius culpa!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci saepe quae facilis non excepturi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci saepe quae facilis non excepturi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci saepe quae facilis non excepturi.</p>
+      </div>
+
+      <div class="right">
+        <div class="range">
+          <span>Branding</span>
+          <span style="float: right;">90%</span>
+          <div class="progress-container">
+            <div class="progress-bar brand"></div>
+          </div>
+        </div>
+
+        <div class="range">
+          <span>Web Design</span>
+          <span style="float: right;">80%</span>
+          <div class="progress-container">
+            <div class="progress-bar web"></div>
+          </div>
+        </div>
+
+        <div class="range">
+          <span>Graphic Design</span>
+          <span style="float: right;">85%</span>
+          <div class="progress-container">
+            <div class="progress-bar graphic"></div>
+          </div>
+        </div>
+
+        <div class="range">
+          <span>Development</span>
+          <span style="float: right;">70%</span>
+          <div class="progress-container">
+            <div class="progress-bar dev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="our-team" style="text-align: center;">
+      <h2>Our Team</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque totam consectetur qui saepe tenetur minus maxime sint amet animi aliquam nesciunt.</p>
+    </div>
+
+    <div class="member-team">
+      <div class="memeber">
+        <div class="image">
+          <img src="./lovepik-programmer-professional-image-png-image_401393936_wh1200.png" alt="Jhon">
+        </div>
+        <span><strong>Jhon</strong><br>Web Designer</span>
+      </div>
+
+      <div class="memeber">
+        <div class="image">
+          <img src="./png-transparent-man-holding-books-student-humour-english-education-learning-student-people-student-png-arm.png" alt="Tomas">
+        </div>
+        <span><strong>Tomas</strong><br>CEO Designer</span>
+      </div>
+
+      <div class="memeber">
+        <div class="image">
+          <img src="./transparent-shoulder-standing-arm-workwear-joint-5db4eda527dd10.0411511415721384051633.jpg" alt="Tam">
+        </div>
+        <span><strong>Tam</strong><br>App Developer</span>
+      </div>
+
+      <div class="memeber">
+        <div class="image">
+          <img src="./images (1).jpeg" alt="Keven">
+        </div>
+        <span><strong>Keven</strong><br>Web Developer</span>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <b>Do you have any ideas?</b>
+      <button type="submit">Contact us</button>
+    </div>
+  </section>
+
+</body>
+</html>
