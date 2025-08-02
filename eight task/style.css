@@ -148,7 +148,7 @@ display: flex;
 }
 
 
-/* تنسيق عام */
+
 .promo-section {
   display: flex;
   margin: 40px;
@@ -312,7 +312,7 @@ display: flex;
             align-items: center;
         }
 
-        /* تحديد موضع كل بطاقة في البداية */
+     
         .card-left {
             background-image: url('./images\ \(3\).jpeg');
             left: 0;
@@ -331,7 +331,6 @@ display: flex;
             z-index: 1;
         }
 
-        /* المحتوى الذي سيظهر عند التحويم */
         .card-content {
             position: absolute;
             top: 0;
@@ -347,7 +346,7 @@ display: flex;
             text-align: center;
             padding: 20px;
             color: white;
-            opacity: 0; /* مخفي في البداية */
+            opacity: 0; 
             pointer-events: none;
             transition: opacity 0.6s ease;
         }
@@ -382,11 +381,11 @@ display: flex;
             background-color: #e65c00;
         }
 
-        /* التأثيرات عند التحويم على البطاقات */
+   
         .card:hover {
             transform: scale(1.1) translateZ(50px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            z-index: 10; /* لجعل البطاقة التي يتم التحويم عليها في المقدمة */
+            z-index: 10; 
         }
 
         .card:hover .card-content {
@@ -394,7 +393,7 @@ display: flex;
             pointer-events: auto;
         }
 
-        /* هذا الجزء يضبط حركة باقي البطاقات عند التحويم على بطاقة معينة */
+     
         .container-food:has(.card-left:hover) .card-center {
             transform: translateX(100px) scale(0.9);
         }
@@ -461,7 +460,7 @@ display: flex;
             display: flex;
             gap: 20px;
             overflow: hidden;
-            width: 900px; /* Adjust width as needed */
+            width: 900px; 
         }
 
         .testimonial-card {
@@ -471,7 +470,7 @@ display: flex;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             text-align: left;
             flex-shrink: 0;
-            width: 400px; /* Width of each card */
+            width: 400px; 
         }
 
         .quote-icon {
@@ -516,7 +515,7 @@ display: flex;
             font-style: normal;
         }
 
-          /* Custom styles for the gallery section */
+         
         .gallery-section {
             padding: 80px 0;
             background-color: #fff;
@@ -573,7 +572,7 @@ display: flex;
     justify-content: center;
     background-image: url(./images\ \(12\).jpeg);
     background-repeat: no-repeat;
-    background-size: cover; /* Optional: This can help the image cover the entire section */
+    background-size: cover; 
 }
 
 
