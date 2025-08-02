@@ -1,0 +1,753 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.top-bar {
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  margin-left: 30%;
+}
+
+.top-bar span {
+  margin: 5px 10px;
+}
+
+.top-bar .social-icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Header */
+   header {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      z-index: 10;
+    }
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* Hero Section */
+.hero {
+  background: url('./Pizza-3007395.jpg') center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  font-family: 'Brush Script MT', cursive;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: orange;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-style: italic;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: darkorange;
+}
+
+.awards-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  background: white;
+  flex-wrap: wrap;
+
+}
+
+.award {
+  text-align: center;
+  max-width: 180px;
+  margin: 20px;
+  font-family: "Dancing Script", cursive;
+display: flex;
+}
+
+.award img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.award h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.stars {
+  font-size: 18px;
+  color: gold;
+  margin-bottom: 5px;
+}
+
+.award p {
+  color: #aaa;
+  font-style: italic;
+}
+
+
+/* تنسيق عام */
+.promo-section {
+  display: flex;
+  margin: 40px;
+}
+
+.promo-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.promo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promo-box::after{
+    background: rgba(176, 91, 26, 0);
+    content: "s";
+}
+
+ .main-container {
+            display: flex;
+            gap: 50px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .left-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 600px;
+            height: 400px;
+            margin: 5% 0 0 10%;
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            color: #fff;
+            font-weight: 600;
+            pointer-events: none;
+        }
+
+        .overlay-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .overlay-item.orange-overlay {
+            background-color: rgba(255, 152, 0, 0.85);
+        }
+
+        .overlay-item.dark-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        
+        .overlay-item p {
+            margin: 5px 0 0 0;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .right-side {
+            width: 400px;
+            padding-top: 20px;
+            margin-top: 30px;
+            margin-left: 20%;
+        }
+        
+        .right-side h2 {
+            font-size: 2em;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .quote-box {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #666;
+            line-height: 1.6;
+            position: relative;
+        }
+    
+        .dot{
+            font-size:3em;
+            font-weight: bolder;
+            }
+        .about-button {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+        }
+        /*---------------------------------------*/
+               .container-food {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            width: 960px;
+            height: 480px;
+            position: relative;
+            margin-left: 20%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 320px;
+            height: 480px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.6s ease, z-index 0.6s ease, box-shadow 0.6s ease;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* تحديد موضع كل بطاقة في البداية */
+        .card-left {
+            background-image: url('./images\ \(3\).jpeg');
+            left: 0;
+            z-index: 1;
+        }
+
+        .card-center {
+            background-image: url('./images\ \(4\).jpeg');
+            left: 320px;
+            z-index: 2;
+        }
+
+        .card-right {
+            background-image: url('./images.jpeg');
+            left: 640px;
+            z-index: 1;
+        }
+
+        /* المحتوى الذي سيظهر عند التحويم */
+        .card-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            opacity: 0; /* مخفي في البداية */
+            pointer-events: none;
+            transition: opacity 0.6s ease;
+        }
+
+        .card-content h2 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-content p {
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            font-weight: 400;
+            max-width: 250px;
+        }
+
+        .view-more-btn {
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+        }
+
+        .view-more-btn:hover {
+            background-color: #e65c00;
+        }
+
+        /* التأثيرات عند التحويم على البطاقات */
+        .card:hover {
+            transform: scale(1.1) translateZ(50px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            z-index: 10; /* لجعل البطاقة التي يتم التحويم عليها في المقدمة */
+        }
+
+        .card:hover .card-content {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* هذا الجزء يضبط حركة باقي البطاقات عند التحويم على بطاقة معينة */
+        .container-food:has(.card-left:hover) .card-center {
+            transform: translateX(100px) scale(0.9);
+        }
+        .container-food:has(.card-left:hover) .card-right {
+            transform: translateX(100px) scale(0.9);
+        }
+
+        .container-food:has(.card-center:hover) .card-left {
+            transform: translateX(-100px) scale(0.9);
+        }
+        .container-food:has(.card-center:hover) .card-right {
+            transform: translateX(100px) scale(0.9);
+        }
+
+        .container-food:has(.card-right:hover) .card-left {
+            transform: translateX(-100px) scale(0.9);
+        }
+        .container-food:has(.card-right:hover) .card-center {
+            transform: translateX(-100px) scale(0.9);
+        }
+
+        /*----------------------------*/
+       .testimonials-section {
+            text-align: center;
+            padding: 80px 20px;
+            width: 100%;
+            margin: 0 auto;
+            background-color:rgb(242, 238, 231);
+        }
+
+        .testimonials-section h2 {
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .testimonials-section p {
+            font-size: 1.5em;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .testimonial-arrow {
+            font-size: 2em;
+            color: #ff9800;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .testimonial-arrow:hover {
+            color: #e68a00;
+        }
+
+        .testimonials-container {
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+            width: 900px; /* Adjust width as needed */
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            flex-shrink: 0;
+            width: 400px; /* Width of each card */
+        }
+
+        .quote-icon {
+            font-size: 3em;
+            color: #ff9800;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewer-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .reviewer-details h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .reviewer-details p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #999;
+            font-style: normal;
+        }
+
+          /* Custom styles for the gallery section */
+        .gallery-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .gallery-card {
+            border: none;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            margin: -11px;
+        }
+        
+        .gallery-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .chef-special-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color:#e65c00;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+        
+        .gallery-card h4 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .gallery-card .price {
+            font-size: 1.1em;
+            color: var(--orange-color);
+            font-weight: bold;
+        }
+        
+        .gallery-card .description {
+            font-size: 0.9em;
+            color: #999;
+        }
+      /* --- Booking Section --- */
+      .booking-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images\ \(12\).jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: This can help the image cover the entire section */
+}
+
+
+        .booking-content {
+            flex: 1;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .booking-content h2 {
+            font-size: 2.5em;
+            color: #ff6600;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .booking-content p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .booking-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .booking-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .booking-btn {
+            background-color: #ff6600;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .booking-btn:hover {
+            background-color: #e65c00;
+        }
+
+        /* --- Subscribe Section --- */
+        .subscribe-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ff6600;
+            color: white;
+            padding: 40px 100px;
+        }
+        
+        .subscribe-text h3 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        
+        .subscribe-text p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .subscribe-form input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            font-size: 1em;
+        }
+        
+        .subscribe-form button {
+            background-color: #fff;
+            color: #ff6600;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .subscribe-form button:hover {
+            background-color: #eee;
+        }
+              /* --- Footer Section --- */
+        .footer-section {
+            background-color: #8c5210;
+            color:#eee;
+            padding: 60px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color:#eee;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-column p, .footer-column li {
+            font-size: 0.9em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-list i {
+            color: #ff9800;
+            font-size: 1.2em;
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* --- Instagram Grid --- */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 250px;
+            margin-top: 20px;
+        }
+        
+        .instagram-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        /* --- Copyright Bar --- */
+        .copyright-bar {
+            background-color: #3b2203;
+            color:#eee;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
+        }
