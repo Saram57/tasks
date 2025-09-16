@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gidgetize - Worldwide Electronics Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #fff;
+        }
+
+        .top-header {
+            background-color: #2e5c40;
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .top-header-content,
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .language-dropdown a img {
+            margin-right: 10px;
+        }
+
+        .header-options span {
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .main-nav {
+            background-color: #fff;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .search-bar {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .search-bar select,
+        .search-bar input {
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+
+        .search-bar select {
+            border-right: 1px solid #ddd;
+        }
+
+        .search-btn {
+            background-color: #358054;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .nav-icons a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-icons i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .badge {
+            background-color: #e74c3c;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 10px;
+            position: relative;
+            top: -10px;
+            left: -5px;
+        }
+
+        .categories-nav {
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .browse-all-btn {
+            color: #3c7852;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* All Categories Dropdown Styles */
+        .all-categories-dropdown .dropdown-content {
+            position: absolute;
+            width: 250px;
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        .all-categories-dropdown .dropdown-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .all-categories-dropdown .dropdown-content li a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .all-categories-dropdown .dropdown-content li:last-child a {
+            border-bottom: none;
+        }
+
+        .all-categories-dropdown .dropdown-content li a:hover {
+            color: #2ecc71;
+            background-color: #f9f9f9;
+        }
+
+        .all-categories-dropdown .dropdown-content .separator {
+            height: 10px;
+            background-color: #f7f7f7;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .main-menu li a {
+            text-decoration: none;
+            color: #555;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .discount-banner {
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .hero-section {
+            padding: 40px 0;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .hero-main-card {
+            background: linear-gradient(to right, #4a1c6a, #8e44ad, #c0392b);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-main-card .card-text {
+            z-index: 1;
+        }
+
+        .hero-main-card .card-image {
+            width: 600px;
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            margin-left: 31.5%;
+        }
+
+        .new-arrivals {
+            color: #daf437;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .shop-now-btn {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .hero-side-cards {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .side-card {
+            border-radius: 10px;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .mobile-card {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+        }
+
+        .tablet-card {
+            background: linear-gradient(to right, #4a1c6a, #8e44ad);
+        }
+
+        .side-card .card-text {
+            z-index: 1;
+        }
+
+        .side-card .side-image {
+            width: 150px;
+            z-index: 1;
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+        }
+
+        /* Category Section */
+        .category-section {
+            padding: 40px 0;
+        }
+
+        .category-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .categories-wrapper {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 10px; 
+            flex-grow: 1;
+        }
+        
+        .category-item {
+            min-width: 150px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px; 
+        }
+
+        .category-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .category-item:hover .category-circle {
+            transform: translateY(-5px);
+        }
+
+        .category-circle img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        .category-name {
+            font-weight: 500;
+        }
+
+        .category-items-count {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #3c7852;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .carousel-btn.prev {
+            left: -20px;
+        }
+
+        .carousel-btn.next {
+            right: -20px;
+            background-color: #3c7852; 
+        }
+
+        .carousel-btn:disabled {
+            background-color: #b3d1bc;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <p>Welcome to Worldwide Electronics Store</p>
+            <div class="header-options">
+                <div class="dropdown">
+                    <span><i class="fas fa-globe"></i> English <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content language-dropdown">
+                        <a href="#"><img src="https://flagcdn.com/w20/gb.png" alt="English Flag"> English</a>
+                        <a href="#"><img src="https://flagcdn.com/w20/es.png" alt="Spanish Flag"> Español</a>
+                        <a href="#"><img src="https://flagcdn.com/w20/cn.png" alt="Chinese Flag"> 简体中文</a>
+                        <a href="#"><img href="#"><img src="https://flagcdn.com/w20/it.png" alt="Italian Flag"> Italiano</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span>Australia(PKR Rs) <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content currency-dropdown">
+                        <a href="#">Australia (PKR Rs)</a>
+                        <a href="#">Austria (PKR Rs)</a>
+                        <a href="#">Belgium (PKR Rs)</a>
+                        <a href="#">Germany (PKR Rs)</a>
+                        <a href="#">Italy (PKR Rs)</a>
+                        <a href="#">Netherlands (PKR Rs)</a>
+                        <a href="#">Norway (PKR Rs)</a>
+                        <a href="#">Pakistan (PKR Rs)</a>
+                        <a href="#">Poland (PKR Rs)</a>
+                        <a href="#">Portugal (PKR Rs)</a>
+                        <a href="#">Spain (PKR Rs)</a>
+                        <a href="#">United Kingdom (PKR Rs)</a>
+                        <a href="#">United States (PKR Rs)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-nav">
+        <div class="nav-content">
+            <h1 class="logo">GADGETIZE</h1>
+            <div class="search-bar">
+                <select>
+                    <option>All Categories</option>
+                </select>
+                <input type="text" placeholder="Search for products...">
+                <button class="search-btn">Search</button>
+            </div>
+            <div class="nav-icons">
+                <a href="#"><i class="fa-regular fa-user"></i> Login<br>Account</a>
+                <a href="#"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #ddd;"></i> Your Cart <br> Rs.0.00</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="categories-nav">
+        <div class="nav-content">
+            <div class="dropdown all-categories-dropdown">
+                <a href="#" class="browse-all-btn">
+                    <i class="fas fa-bars"></i> Browse All Categories
+                </a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Computer & Desktop <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">Laptop & Ipad</a></li>
+                        <li><a href="#">Cameras & Photos <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">Smart Phones & Tablets <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">Home & Kitchen <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">TV & Audios</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#">Watches & Eyewear</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#">Top Deals</a></li>
+                        <li><a href="#">Top Selling Products</a></li>
+                        <li><a href="#">Top Featured Products</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product <i class="fas fa-caret-down"></i></a></li>
+                <li><a href="#">Blog <i class="fas fa-caret-down"></i></a></li>
+                <li><a href="#">Pages <i class="fas fa-caret-down"></i></a></li>
+                <li><a href="#">Shop <i class="fas fa-caret-down"></i></a></li>
+            </ul>
+            <span class="discount-banner"><img src="images (3).png" style="width: 20px; ">Sale $20 Off Your First Order.</span>
+        </div>
+    </nav>
+    
+    <main class="hero-section">
+        <div class="hero-container">
+            <div class="hero-main-card">
+                <img src="download.png" alt="4K LCD Monitor" class="card-image">
+                <div class="card-text">
+                    <span class="new-arrivals">NEW ARRIVALS</span>
+                    <h2><span style="color:#daf437">4K</span> LCD Quantum Vision LCD</h2>
+                    <p>Limited Time: Online Only!</p>
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="hero-side-cards">
+                <div class="side-card mobile-card">
+                    <div class="card-text">
+                        <h3>Mobile</h3>
+                        <h4>Nexus Mobile Pro 256GB</h4>
+                        <p>Limited Time: Online Only!</p>
+                    </div>
+                    <img src="Screenshot 2025-09-05 070358 (1).png" alt="Nexus Mobile" class="side-image">
+                </div>
+                <div class="side-card tablet-card">
+                    <div class="card-text">
+                        <h3>iPadMini</h3>
+                        <h4>10 Inch iPad Mini Pro</h4>
+                        <p>Limited Time: Online Only!</p>
+                    </div>
+                    <img src="Screenshot 2025-09-05 070630 (1).png" alt="iPad Mini" class="side-image">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section class="category-section">
+        <div class="category-container">
+            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="categories-wrapper">
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./cheapgaminglaptops-2048px-7981.png" alt="Laptop">
+                    </div>
+                    <span class="category-name">Laptop</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./1 (2).png" alt="Earbuds">
+                    </div>
+                    <span class="category-name">Earbuds</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./images (14).png" alt="Keyboard">
+                    </div>
+                    <span class="category-name">Keyboard</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./images (15).png" alt="TV & LCD">
+                    </div>
+                    <span class="category-name">TV & LCD</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./61mI4LfYSeL._UF894,1000_QL80_.png" alt="RGB Mouse">
+                    </div>
+                    <span class="category-name">RGB Mouse</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./oppo-a5-pro-green-1.png" alt="Mobile Phones">
+                    </div>
+                    <span class="category-name">Mobile Phones</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./d7c584d121044f0e2ecd669cc3bd0f86.jpg_720x720q80.png" alt="Handsfree">
+                    </div>
+                    <span class="category-name">Handsfree</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+                <a href="#" class="category-item">
+                    <div class="category-circle">
+                        <img src="./419v5UwllVL._SR290,290_.png" alt="Joysticks">
+                    </div>
+                    <span class="category-name">Joysticks</span>
+                    <span class="category-items-count">10 + items</span>
+                </a>
+            </div>
+            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const wrapper = document.querySelector(".categories-wrapper");
+            const prevBtn = document.querySelector(".carousel-btn.prev");
+            const nextBtn = document.querySelector(".carousel-btn.next");
+
+            if (wrapper && prevBtn && nextBtn) {
+                // Determine the scroll amount based on one item's width
+                const scrollAmount = wrapper.querySelector(".category-item").offsetWidth + 20; // 20px is for margin
+
+                function updateButtons() {
+                    const scrollLeft = wrapper.scrollLeft;
+                    const maxScrollLeft = wrapper.scrollWidth - wrapper.clientWidth;
+
+                    prevBtn.disabled = scrollLeft <= 0;
+                    nextBtn.disabled = scrollLeft >= maxScrollLeft;
+                }
+
+                prevBtn.addEventListener("click", function() {
+                    wrapper.scrollLeft -= scrollAmount * 3; 
+                    setTimeout(updateButtons, 300); // Wait for the scroll to finish
+                });
+
+                nextBtn.addEventListener("click", function() {
+                    wrapper.scrollLeft += scrollAmount * 3;
+                    setTimeout(updateButtons, 300); // Wait for the scroll to finish
+                });
+
+                wrapper.addEventListener("scroll", updateButtons);
+
+                // Initial update on page load
+                updateButtons();
+            }
+        });
+    </script>
+</body>
+</html>
